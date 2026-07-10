@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rebecca Jervey | Customer Education & Instructional Design Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --primary:#0F4C81;
+    --secondary:#2563EB;
+    --light:#F8FAFC;
+    --dark:#1E293B;
+    --gray:#64748B;
+    --border:#E2E8F0;
+    --max-width:1200px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    color:var(--dark);
+    line-height:1.7;
+    background:white;
+}
+
+.container{
+    width:90%;
+    max-width:var(--max-width);
+    margin:auto;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:sticky;
+    top:0;
+    background:white;
+    z-index:1000;
+    border-bottom:1px solid var(--border);
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-weight:800;
+    color:var(--primary);
+}
+
+.nav-links{
+    display:flex;
+    gap:24px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#0F4C81,#2563EB);
+    color:white;
+    padding:100px 0;
+}
+
+.hero-content{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:50px;
+}
+
+.profile-photo{
+    width:240px;
+    height:240px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid rgba(255,255,255,.25);
+}
+
+.hero-text{
+    flex:1;
+    min-width:300px;
+}
+
+.hero h1{
+    font-size:3.25rem;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    font-size:1.3rem;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.btn{
+    padding:12px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:white;
+    color:var(--primary);
+}
+
+.btn-outline{
+    border:2px solid white;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* SECTIONS */
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:2.3rem;
+    color:var(--primary);
+}
+
+/* ABOUT */
+
+.about{
+    background:var(--light);
+}
+
+/* IMPACT */
+
+.impact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.impact-card{
+    text-align:center;
+    padding:30px;
+    border:1px solid var(--border);
+    border-radius:12px;
+}
+
+.impact-card h3{
+    font-size:2rem;
+    color:var(--primary);
+}
+
+/* SKILLS */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.skill{
+    padding:18px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    text-align:center;
+}
+
+/* PROJECTS */
+
+.projects{
+    display:grid;
+    gap:40px;
+}
+
+.project-card{
+    border:1px solid var(--border);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 3px 15px rgba(0,0,0,.06);
+}
+
+.project-image{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    background:#f0f0f0;
+}
+
+.project-content{
+    padding:35px;
+}
+
+.project-content h3{
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.project-content h4{
+    margin-top:20px;
+    margin-bottom:8px;
+}
+
+.project-actions{
+    margin-top:25px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.project-btn{
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.project-view{
+    background:var(--primary);
+    color:white;
+}
+
+.project-case{
+    border:2px solid var(--primary);
+    color:var(--primary);
+}
+
+/* PROCESS */
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.process-card{
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:25px;
+    text-align:center;
+}
+
+.process-card h4{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:var(--light);
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid var(--border);
+    color:var(--gray);
+}
+
+@media(max-width:768px){
+
+.hero{
+    text-align:center;
+}
+
+.hero-content{
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+.nav-links{
+    display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-container">
+<div class="logo">Rebecca Jervey</div>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#impact">Impact</a>
+<a href="#skills">Skills</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<header class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<img
+src="images/rebecca-jervey.jpg"
+alt="Rebecca Jervey"
+class="profile-photo">
+
+<div class="hero-text">
+
+<h1>Rebecca Jervey</h1>
+
+<h2>
+Customer Education • Instructional Design • Learning & Development
+</h2>
+
+<p>
+Learning and Customer Success professional with 10+ years of experience
+designing customer education, onboarding, technical training,
+curriculum, eLearning, and enablement programs for SaaS and technology
+organizations.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#portfolio" class="btn btn-primary">
+View Portfolio
+</a>
+
+<a href="https://www.linkedin.com/in/rbjervey/"
+target="_blank"
+class="btn btn-outline">
+LinkedIn </a>
+
+<a href="Rebecca_Jervey_Resume.pdf"
+target="_blank"
+class="btn btn-outline">
+Download Resume </a>
+
+</div>
+
+</div>
+</div>
+</div>
+
+</header>
+
+<section id="about" class="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>About Me</h2>
+</div>
+
+<p>
+Throughout my career I have helped software customers become successful
+through strategic onboarding, customer education, technical training,
+curriculum design, eLearning development, and enablement programs.
+My experience spans customer success, implementation, instructional
+design, learning strategy, and team leadership. I enjoy transforming
+complex software and business processes into engaging learning
+experiences that drive adoption and measurable business outcomes.
+</p>
+
+</div>
+</section>
+
+<section id="impact">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Impact</h2>
+</div>
+
+<div class="impact-grid">
+
+<div class="impact-card">
+<h3>10+</h3>
+<p>Years in Learning & Development</p>
+</div>
+
+<div class="impact-card">
+<h3>100+</h3>
+<p>Customer Implementations Led</p>
+</div>
+
+<div class="impact-card">
+<h3>Global</h3>
+<p>SaaS Customer Education Experience</p>
+</div>
+
+<div class="impact-card">
+<h3>End-to-End</h3>
+<p>Curriculum & Program Development</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="skills">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Tools & Expertise</h2>
+</div>
+
+<div class="skills-grid">
+
+<div class="skill">Instructional Design</div>
+<div class="skill">Curriculum Development</div>
+<div class="skill">Customer Education</div>
+<div class="skill">Customer Success</div>
+<div class="skill">Learning Strategy</div>
+<div class="skill">Technical Training</div>
+<div class="skill">ILT & VILT Facilitation</div>
+<div class="skill">eLearning Development</div>
+<div class="skill">Storyline</div>
+<div class="skill">Camtasia</div>
+<div class="skill">LMS Administration</div>
+<div class="skill">Program Management</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="portfolio">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Featured Portfolio Projects</h2>
+</div>
+
+<div class="projects">
+
+<div class="project-card">
+
+<img src="images/aaps-guide.png"
+alt="AAPS Guide Project"
+class="project-image">
+
+<div class="project-content">
+
+<h3>AAPS Guide Interactive eLearning</h3>
+
+<h4>Challenge</h4>
+<p>
+Help learners navigate a highly technical Android software installation
+process while adhering to community standards that prohibit audio narration.
+</p>
+
+<h4>My Role</h4>
+<p>
+Instructional Designer, Content Developer, Technical Writer,
+and Learning Experience Designer.
+</p>
+
+<h4>Solution</h4>
+<p>
+Designed a self-paced learning experience that leverages
+visual instruction, structured navigation, and learner-centered
+content to simplify a complex technical process.
+</p>
+
+<div class="project-actions">
+
+<a href="https://aapsguide.github.io/"
+target="_blank"
+class="project-btn project-view">
+View Project </a>
+
+<a href="case-studies/aaps-case-study.pdf"
+target="_blank"
+class="project-btn project-case">
+Download Case Study </a>
+
+</div>
+
+</div>
+</div>
+
+<div class="project-card">
+
+<img src="images/bicycle-curriculum.png"
+alt="Bicycle Curriculum"
+class="project-image">
+
+<div class="project-content">
+
+<h3>Learning to Ride a Bicycle Curriculum</h3>
+
+<h4>Challenge</h4>
+<p>
+Create a structured curriculum that teaches a complex physical skill
+through progressive learning objectives and assessment checkpoints.
+</p>
+
+<h4>My Role</h4>
+<p>
+Instructional Designer and Curriculum Developer.
+</p>
+
+<h4>Solution</h4>
+<p>
+Built a complete lesson plan demonstrating learning objectives,
+skill progression, instructional strategy, and assessment design.
+</p>
+
+<div class="project-actions">
+
+<a href="https://docs.google.com/document/d/1LEIxyA9nM9JTh7Go59Y0bbaopK0EE4FMzrz68CO-jmc/edit?usp=drive_link"
+target="_blank"
+class="project-btn project-view">
+View Lesson Plan </a>
+
+<a href="case-studies/bicycle-curriculum-case-study.pdf"
+target="_blank"
+class="project-btn project-case">
+Download Case Study </a>
+
+</div>
+
+</div>
+</div>
+
+<div class="project-card">
+
+<img src="images/iqvia-release-site.png"
+alt="IQVIA Release Site"
+class="project-image">
+
+<div class="project-content">
+
+<h3>Product Release Communications & Enablement Website</h3>
+
+<h4>Challenge</h4>
+<p>
+Provide customers with an engaging and scalable way to understand
+new product functionality and release updates.
+</p>
+
+<h4>My Role</h4>
+<p>
+Planned, designed, and developed the release experience while leading
+cross-functional collaboration and multimedia content creation.
+</p>
+
+<h4>Solution</h4>
+<p>
+Created a public-facing product release site featuring videos,
+learning resources, and product education content designed
+to drive adoption.
+</p>
+
+<div class="project-actions">
+
+<a href="https://iqviainc.mcoutput.com/1390915/Content/Home.htm"
+target="_blank"
+class="project-btn project-view">
+View Project </a>
+
+<a href="case-studies/iqvia-case-study.pdf"
+target="_blank"
+class="project-btn project-case">
+Download Case Study </a>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="process">
+
+<div class="container">
+
+<div class="section-title">
+<h2>My Design Process</h2>
+</div>
+
+<div class="process-grid">
+
+<div class="process-card">
+<h4>Discover</h4>
+<p>Analyze learners, stakeholders, and business goals.</p>
+</div>
+
+<div class="process-card">
+<h4>Define</h4>
+<p>Create measurable learning objectives.</p>
+</div>
+
+<div class="process-card">
+<h4>Design</h4>
+<p>Develop learning strategies and experiences.</p>
+</div>
+
+<div class="process-card">
+<h4>Develop</h4>
+<p>Build assets, courses, videos, and materials.</p>
+</div>
+
+<div class="process-card">
+<h4>Deliver</h4>
+<p>Launch through the appropriate channels.</p>
+</div>
+
+<div class="process-card">
+<h4>Measure</h4>
+<p>Evaluate results and continuously improve.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Let's Connect</h2>
+</div>
+
+<p>
+Interested in discussing Customer Education, Learning &
+Development, Instructional Design, or Customer Success opportunities?
+</p>
+
+<br>
+
+<p>
+<a href="https://www.linkedin.com/in/rbjervey/" target="_blank">
+Connect on LinkedIn
+</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Rebecca Jervey | Customer Education & Instructional Design Portfolio
+</footer>
+
+</body>
+</html>
